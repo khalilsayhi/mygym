@@ -2,13 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './bootstrap.min.css'
 import './index.css'
+import 'react-toastify/dist/ReactToastify.css'
 import App from './App'
+import store from './store'
+import { Provider } from 'react-redux'
 import reportWebVitals from './reportWebVitals'
-
+import './styles/login.css'
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 )
 
